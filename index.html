@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Probe Local DNS</title>
+  <script src="./node_modules/fingerprintjs/fingerprint.js"></script>
+  <script>
+    function showLocalDnsAddress(data) {
+      document.getElementById('result').innerText = JSON.stringify(data);
+    }
+
+    var target = document.getElementsByTagName('script')[0] || document.head;
+    var url = "http://" + new Fingerprint({canvas: true}).get() + ".<domain>:8053?callback=showLocalDnsAddress";
+    var script = document.createElement('script');
+    script.src = url;
+    target.parentNode.insertBefore(script, target);
+  </script>
+</head>
+<body id="result">
+</body>
+</html>

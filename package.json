@@ -1,0 +1,19 @@
+{
+  "name": "probe-localdns",
+  "version": "0.0.1",
+  "description": "Get local dns ip by web server",
+  "main": "index.js",
+  "scripts": {
+    "server": "node ./index.js"
+  },
+  "author": "Denny",
+  "license": "MIT",
+  "dependencies": {
+    "fingerprintjs": "0.5.3",
+    "memory-cache": "0.2.0",
+    "native-dns": "0.7.0"
+  },
+  "devDependencies": {
+    "inliner": "1.13.1"
+  }
+}
